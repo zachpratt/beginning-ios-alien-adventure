@@ -9,8 +9,12 @@
 extension Hero {
     
     func matchMoonRocks(inventory: [UDItem]) -> [UDItem] {
-        return [UDItem]()
+        var MoonRocks = [UDItem]()
+        for item in inventory {
+            if item.name.containsString("MoonRock") {
+                MoonRocks.append(item)
+            }
+        }
+        return MoonRocks
     }
 }
-
-// If you have completed this function and it is working correctly, feel free to skip this part of the adventure by opening the "Under the Hood" folder, and making the following change in Settings.swift: "static var RequestsToSkip = 2"
