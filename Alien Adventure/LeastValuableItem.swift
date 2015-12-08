@@ -9,8 +9,16 @@
 extension Hero {
     
     func leastValuableItem(inventory: [UDItem]) -> UDItem? {
-        return nil
+        var currentLowestItemValue = inventory.first?.baseValue
+        var lowestValueItem: UDItem?
+        if inventory.count > 0 {
+            for item in inventory {
+                if item.baseValue < currentLowestItemValue {
+                    currentLowestItemValue = item.baseValue
+                    lowestValueItem = item
+                }
+            }
+        }
+        return lowestValueItem
     }
 }
-
-// If you have completed this function and it is working correctly, feel free to skip this part of the adventure by opening the "Under the Hood" folder, and making the following change in Settings.swift: "static var RequestsToSkip = 3"
