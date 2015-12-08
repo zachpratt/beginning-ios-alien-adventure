@@ -7,10 +7,16 @@
 //
 
 extension Hero {
-    
+
     func inscriptionEternalStar(inventory: [UDItem]) -> UDItem? {
-        return nil
+        var itemWithInscription: UDItem? //varaiable to return item from function
+        for item in inventory { // loop through inventory array
+            if let itemInscription = item.inscription { //unwrap isncription which is type "optional string"
+                if itemInscription.containsString("THE ETERNAL STAR") {
+                    itemWithInscription = item // if a string exists and contains "THE ETERNAL STAR" set variable 
+                }
+            }
+        }
+        return itemWithInscription // Returns the UDITEM or nil
     }
 }
-
-// If you have completed this function and it is working correctly, feel free to skip this part of the adventure by opening the "Under the Hood" folder, and making the following change in Settings.swift: "static var RequestsToSkip = 3"
