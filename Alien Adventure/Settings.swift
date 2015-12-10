@@ -20,7 +20,7 @@ struct Settings {
         static let FontColor = UIColor.whiteColor()
         static var Level = 0
         static var ShowBadges = false
-        static var RequestsToSkip = 3
+        static var RequestsToSkip = 4
     }
     
     // MARK: Dialogue (Set by UDDataLoader)
