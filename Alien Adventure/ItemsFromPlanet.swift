@@ -6,10 +6,20 @@
 //  Copyright © 2015 Udacity. All rights reserved.
 //
 
+import Foundation
+
 extension Hero {
     
     func itemsFromPlanet(inventory: [UDItem], planet: String) -> [UDItem] {
-        return [UDItem]()
+        var requiredItems = [UDItem]()
+        for item in inventory {
+            if let planetName = item.historicalData["PlanetOfOrigin"] as? String {
+                if planetName == planet {
+                    requiredItems.append(item)
+                }
+            }
+        }
+        return requiredItems
     }
     
 }
