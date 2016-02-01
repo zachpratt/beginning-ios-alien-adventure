@@ -8,7 +8,7 @@
 import Foundation
 
 extension Hero {
-    
+    //This code was written by Udacity forum user robertozanchi. Intitially I wanted to sort the dictionary by value, but that isn't possible with a Swift dictionary. I was able to find a sort method for using with NSDictionaries, but a dictionary of type [Character:Int] cannot be converted to an NSDictionary by coercion. 
     func mostCommonCharacter(inventory: [UDItem]) -> Character? {
         
         var letters = [Character:Int]()
