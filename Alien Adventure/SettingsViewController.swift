@@ -47,7 +47,7 @@ class SettingsViewController: UIViewController {
             forControlEvents: .TouchUpInside)
         showBadgesSwitch.addTarget(self,
             action: Selector("showBadges:"),
-            forControlEvents: .TouchUpInside)
+            forControlEvents: .ValueChanged)
         levelSegmentedControl.addTarget(self,
             action: Selector("switchLevel:"),
             forControlEvents: .ValueChanged)
@@ -56,23 +56,14 @@ class SettingsViewController: UIViewController {
     // MARK: Implementing Actions
     
     func switchLevel(segmentControl: UISegmentedControl) {
-        switch levelSegmentedControl.selectedSegmentIndex {
-        case 0:
-            Settings.Common.Level = 1
-        case 1:
-            Settings.Common.Level = 2
-        case 2:
-            Settings.Common.Level = 3
-        case 3:
-            Settings.Common.Level = 4
-        default:
-            Settings.Common.Level = 1
-        }
+        Settings.Common.Level = levelSegmentedControl.selectedSegmentIndex
     }
     
     func showBadges(switchControl: UISwitch) {
         if showBadgesSwitch.on {
             Settings.Common.ShowBadges = true
+        } else {
+            Settings.Common.ShowBadges = false
         }
     }
     

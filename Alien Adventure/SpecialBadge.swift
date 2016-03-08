@@ -20,7 +20,7 @@ class SpecialBadge: Badge {
         case Shake = 2
     }
     
-    func growAndShrink() {
+    func shake() {
         let x: Float = 10
         let y: Float = 6
         let numberOfTimes = 2.0 / 0.04
@@ -43,7 +43,7 @@ class SpecialBadge: Badge {
         runAction(SKAction.repeatActionForever(action))
     }
     
-    func shake() {
+    func growAndShrink() {
         let action1 = SKAction.scaleTo(0.8, duration: 1.0)
         let action2 = SKAction.scaleTo(1.1, duration: 1.0)
         let sequencedAction = SKAction.sequence([action1, action2])
