@@ -60,11 +60,7 @@ class SettingsViewController: UIViewController {
     }
     
     func showBadges(switchControl: UISwitch) {
-        if showBadgesSwitch.on {
-            Settings.Common.ShowBadges = true
-        } else {
-            Settings.Common.ShowBadges = false
-        }
+        Settings.Common.ShowBadges = showBadgesSwitch.on
     }
     
     func startGame() {

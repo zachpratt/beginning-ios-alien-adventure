@@ -15,9 +15,7 @@ class SpecialBadge: Badge {
     let animation = Int(arc4random_uniform(3))
     
     enum BadgeAnimation: Int {
-        case GrowAndShrink = 0
-        case Rotate = 1
-        case Shake = 2
+        case GrowAndShrink = 0, Rotate, Shake
     }
     
     func shake() {
