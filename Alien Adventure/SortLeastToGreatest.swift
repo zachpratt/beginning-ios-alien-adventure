@@ -9,9 +9,10 @@
 extension Hero {
     
     func sortLeastToGreatest(inventory: [UDItem]) -> [UDItem] {
-        return [UDItem]()
-    }
-    
+        return inventory.sort { $0 < $1 }
+    }    
 }
 
-// If you have completed this function and it is working correctly, feel free to skip this part of the adventure by opening the "Under the Hood" folder, and making the following change in Settings.swift: "static var RequestsToSkip = 5"
+
+// I didn't remember that we had already overloaded the comparator function way back in Part 2 .. The below code worked just fine, but obviously reusing the previously written code makes more sense. Thanks forum!
+//return inventory.sort { $0.rarity.rawValue < $1.rarity.rawValue || ($0.rarity.rawValue == $1.rarity.rawValue && $0.baseValue < $1.baseValue) }
