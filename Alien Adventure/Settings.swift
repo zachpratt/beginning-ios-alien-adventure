@@ -18,9 +18,9 @@ struct Settings {
         static let GameDataURL = NSBundle.mainBundle().URLForResource("GameData", withExtension: "plist")!
         static let Font = "Superclarendon-Italic"
         static let FontColor = UIColor.whiteColor()
-        static var Level = 3
+        static var Level = 0
         static var ShowBadges = false
-        static var RequestsToSkip = 7
+        static var RequestsToSkip = 0
     }
     
     // MARK: Dialogue (Set by UDDataLoader)
